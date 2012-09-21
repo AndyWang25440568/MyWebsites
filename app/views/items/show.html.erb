@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <div>
+      <h2>Item name: <%= @item.name %></h2>
+      <%= link_to image_tag("Cappuccino.jpg", alt: "Rails"), 'http://www.starbucks.com/'%>
+      <div id="comment-list">
+        <%=  render 'list' %>
+      </div>
+    </div>
+</p>
+<p>
+      <div id="comment-form">
+        <%= render 'comments/form' %>
+      </div>
+      <%= link_to 'Back', items_path %>
+
+</p>
