@@ -5,12 +5,8 @@ gem 'bootstrap-sass', '2.0.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
-  gem ‘sqlite3′
-end
-
-
-# Gems used only for assets and not required
+gem 'sqlite3'
+# Gms used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

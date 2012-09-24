@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    @item.comments.delete(comment)
+    #@item.comments.delete(comment)
     respond_to do |format|
       format.html { redirect_to comments_url }
       format.json { head :no_content }
