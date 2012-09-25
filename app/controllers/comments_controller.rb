@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :create]
   def index
     @comments = Comment.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @comments }
+      format.xml { render json: @comments}
     end
   end
 

@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <%= form_for(@comment, :remote => true) do |f| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
@@ -19,4 +20,7 @@
   <div class="actions" title="Make Comment">
     <%= f.submit :class => 'btn btn-small btn-primary'%>
   </div>
+<% end %>
+<% else %>
+    <h3>You need to log in or sign up.</h3>
 <% end %>

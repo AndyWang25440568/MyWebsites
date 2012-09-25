@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '2.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'devise'
 # Gms used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,4 +35,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-  gem "devise", "1.1.rc0"
+
