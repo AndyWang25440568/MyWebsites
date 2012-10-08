@@ -1,12 +1,11 @@
-
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "CommentHouse", {:action=>"index", :controller=>"/items"}, id: "logo" %>
+      <%= link_to "CommentHouse", "http://localhost:3000", id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",     {:action=>"index", :controller=>"/items"}%></li>
-          <li><%= link_to "Help",     {:action=>"help", :controller=>"/static_pages"}%></li>
+          <li class="active"><%= link_to "Home",     "http://localhost:3000"%></li>
+          <li class="active"><%= link_to "Help",     {:action=>"help", :controller=>"/static_pages",id: "logo"}%></li>
         </ul>
       </nav>
     </div>

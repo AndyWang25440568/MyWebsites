@@ -2,11 +2,13 @@
 
 <p>
     <div>
-      <h2>Item name: <%= @item.name %></h2>
+      <h2>Product name: <%= @item.name %></h2>
       <%= image_tag("#{@item.name}.jpg", alt: "Rails")%>
+
       <div id="comment-list">
         <%=  render 'list' %>
       </div>
+
     </div>
 </p>
 <p>

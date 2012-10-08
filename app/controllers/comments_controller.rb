@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @comments }
-      format.xml { render json: @comments}
+      format.js {render js: @comments}
     end
   end
 
@@ -23,9 +23,13 @@ class CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
   end
+
   def create
     #@comment = Comment.new(params[:comment])
     p params
+    puts "***************************"
+    puts params
+    puts "***********************"
     @item = Item.find_by_id(params[:comment][:item_id])
     p @item
 
