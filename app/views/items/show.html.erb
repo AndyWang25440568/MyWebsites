@@ -3,7 +3,12 @@
 <p>
     <div>
       <h2>Product name: <%= @item.name %></h2>
-      <%= image_tag("#{@item.name}.jpg", alt: "Rails")%>
+      <%= link_to image_tag("#{@item.name}.jpg",:action => 'home',:controller => 'static_pages')%>
+      <div>
+        <strong>
+        <h2>Current Overall Ratings: <span id="item-ratings"><%= calc_ratings(@item.comments) %></span></h2>
+        </strong>
+      </div>
 
       <div id="comment-list">
         <%=  render 'list' %>

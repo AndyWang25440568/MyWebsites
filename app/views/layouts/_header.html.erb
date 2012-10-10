@@ -1,11 +1,17 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
+    <div class="container-fluid">
       <%= link_to "CommentHouse", "http://localhost:3000", id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li class="active"><%= link_to "Home",     "http://localhost:3000"%></li>
-          <li class="active"><%= link_to "Help",     {:action=>"help", :controller=>"/static_pages",id: "logo"}%></li>
+          <% if user_signed_in? %>
+                  <li><%= link_to current_user.email %> </li>
+                  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+              <% else %>
+                  <li><%= link_to "Sign in",   new_user_session_path %></li>
+              <% end %>
+          <li><%= link_to "Home",     "http://localhost:3000"%></li>
+          <li><%= link_to "Help",     {:action=>"help", :controller=>"/static_pages",id: "logo"}%></li>
         </ul>
       </nav>
     </div>

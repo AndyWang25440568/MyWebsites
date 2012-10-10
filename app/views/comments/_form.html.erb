@@ -11,19 +11,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="grade">
-    <select multiple="multiple">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
+   <div class ="grade">
+          <h4>Please select your overall rate for this product</h4>
+          <select name = "comment[grade]" multiple="multiple">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+   </div>
 
   <div class="field">
-    <%= f.label :"Your Comment"%><br />
+    <strong>
+    <%= f.label :"Your comments help improvement"%><br />
+    </strong>
     <%= f.text_area :content%>
     <%= f.hidden_field :item_id, :value => params[:id] %>
   </div>
