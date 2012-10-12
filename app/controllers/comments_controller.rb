@@ -30,6 +30,7 @@ class CommentsController < ApplicationController
     puts "***************************"
     puts params
     puts "***********************"
+    params[:comment][:grade]
     @item = Item.find_by_id(params[:comment][:item_id])
     p @item
 
