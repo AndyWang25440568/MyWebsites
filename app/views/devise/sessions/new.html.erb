@@ -1,5 +1,6 @@
-<h2>Hello!</h2>
-
+<h3>New User?Please sign up</h3>
+<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-default btn-primary' %>
+<h3>Already have an account?</h3>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div>
     <%= f.label :email %><br />

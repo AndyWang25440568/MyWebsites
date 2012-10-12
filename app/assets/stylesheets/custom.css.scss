@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$grayMediumLight: #d5dbea;
 
 /* universal */
 
@@ -40,7 +40,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color: $red;
+  color: #27185d;
 }
 
 h2 {
@@ -59,11 +59,11 @@ h3 {
   color: $red;
 }
 h4 {
-  font-size: 2.4em;
+  font-size: 1.3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
-  color: #31cd8a;
+  text-align: left;
+  color: #3e85cd;
 }
 p {
   font-size: 1.1em;

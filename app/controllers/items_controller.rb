@@ -43,6 +43,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     puts params
+
+    p params[:comment][:item_grade]
+
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }

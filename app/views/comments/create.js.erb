@@ -2,5 +2,6 @@
 
 $('#comment-list').html('<%= escape_javascript(render :partial => 'items/list') %>');
 $('#comment_content').val("");
+$('#item-ratings').html("<%= calc_ratings(@item.comments) %>");
 
 //$('#comment-form').submit()
