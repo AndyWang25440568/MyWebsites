@@ -27,9 +27,6 @@ class CommentsController < ApplicationController
   def create
     #@comment = Comment.new(params[:comment])
     p params
-    puts "***************************"
-    puts params
-    puts "***********************"
     @item = Item.find_by_id(params[:comment][:item_id])
     p @item
 
