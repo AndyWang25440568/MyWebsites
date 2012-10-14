@@ -1,10 +1,16 @@
 require "spec_helper"
 
-describe "Items" do
+describe Item do
 
-  it "should not be valid without a name" do
-    item = Item.new
-    item.should_not be_valid
+  context "is not valid without "
+  it "a name" do
+    subject.should_not be_valid
+    subject.errors[:name].should_not be_empty
   end
 
+  it "description" do
+    subject.name = "Mocha"
+    subject.should_not be_valid
+    subject.errors[:description].should_not be_empty
+  end
 end
